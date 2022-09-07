@@ -2,11 +2,11 @@ import React from 'react'
 import Header from './components/header'
 import Details from './components/details'
 import Item from './components/item'
-import { View, StyleSheet, FlatList } from 'react-native'
+import { View, StyleSheet, FlatList, SafeAreaView } from 'react-native'
 import TextDefault from '../../components/TextDefault'
 
 export default function BasketIndex({ header, details, itens }) {
-    return <>
+    return <SafeAreaView>
         <FlatList
             data={itens.list}
             renderItem={Item}
@@ -21,7 +21,7 @@ export default function BasketIndex({ header, details, itens }) {
                 </>
             }}
         />
-    </>
+    </SafeAreaView>
 }
 
 const styles = StyleSheet.create({
