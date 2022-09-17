@@ -2,26 +2,24 @@ import React from 'react'
 import Header from './components/header'
 import Details from './components/details'
 import Item from './components/item'
-import { View, StyleSheet, FlatList, SafeAreaView } from 'react-native'
+import { View, StyleSheet, FlatList } from 'react-native'
 import TextDefault from '../../components/TextDefault'
 
 export default function BasketIndex({ header, details, itens }) {
-    return <SafeAreaView>
-        <FlatList
-            data={itens.list}
-            renderItem={Item}
-            keyExtractor={({ name }) => name}
-            ListHeaderComponent={() => {
-                return <>
-                    <Header {...header} />
-                    <View style={styles.basket}>
-                        <Details {...details} />
-                        <TextDefault style={styles.title}>{itens.title}</TextDefault>
-                    </View>
-                </>
-            }}
-        />
-    </SafeAreaView>
+    return <FlatList
+        data={itens.list}
+        renderItem={Item}
+        keyExtractor={({ id }) => id}
+        ListHeaderComponent={() => {
+            return <>
+                <Header {...header} />
+                <View style={styles.basket}>
+                    <Details {...details} />
+                    <TextDefault style={styles.title}>{itens.title}</TextDefault>
+                </View>
+            </>
+        }}
+    />
 }
 
 const styles = StyleSheet.create({

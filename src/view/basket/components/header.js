@@ -1,7 +1,6 @@
 import React from 'react'
 import { Dimensions, ImageBackground, Platform, StyleSheet } from 'react-native'
-
-import headerImage from '../../../../assets/header.png'
+import headerImage from '../../../assets/basketImage.png'
 import TextDefault from '../../../components/TextDefault'
 
 export default function header({ title }) {

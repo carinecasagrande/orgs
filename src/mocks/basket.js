@@ -1,9 +1,9 @@
-import farmLogo from '../../assets/farmLogo.png'
-import tomate from '../../assets/products/Tomate.png';
-import brocolis from '../../assets/products/Brocolis.png';
-import batata from '../../assets/products/Batata.png';
-import pepino from '../../assets/products/Pepino.png';
-import abobora from '../../assets/products/Abobora.png';
+import jennyJackFarm from '../assets/farm/jenny-jack.png'
+import tomato from '../assets/products/tomato.png'
+import broccoli from '../assets/products/broccoli.png'
+import potato from '../assets/products/potato.png'
+import cucumber from '../assets/products/cucumber.png'
+import pumpkin from '../assets/products/pumpkin.png'
 
 const basketMocks = {
     header: {
@@ -11,7 +11,7 @@ const basketMocks = {
     },
     details: {
         name: 'Cesta de Verduras',
-        farmLogo: farmLogo,
+        farmLogo: jennyJackFarm,
         farmName: 'Jenny Jack Farm',
         description: 'Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha.',
         price: 'R$ 40,00',
@@ -21,27 +21,32 @@ const basketMocks = {
         title: "Itens da Cesta",
         list: [
             {
+                id: 1,
                 name: "Tomate",
-                image: tomate,
+                image: tomato,
             },
             {
+                id: 2,
                 name: "Brócolis",
-                image: brocolis,
+                image: broccoli,
             },
             {
+                id: 3,
                 name: "Batata",
-                image: batata,
+                image: potato,
             },
             {
+                id: 4,
                 name: "Pepino",
-                image: pepino,
+                image: cucumber,
             },
             {
+                id: 5,
                 name: "Abóbora",
-                image: abobora,
+                image: pumpkin,
             }
         ]
     }
 }
 
-export default basketMocks;
+export default basketMocks

@@ -1,16 +1,24 @@
-import React, { Fragment, useEffect } from 'react'
-import BasketIndex from './src/view/basket'
-import BasketMocks from './src/mocks/basket'
+import React, { useEffect } from 'react'
+import HomeIndex from './src/view/home'
 import SplashScreen from 'react-native-splash-screen'
+import { SafeAreaView, StyleSheet } from 'react-native'
 
 export default function App() {
   useEffect(() => {
     setTimeout(() => {
       SplashScreen.hide()
-    }, 500);
+    }, 500)
   })
 
   return (
-    <BasketIndex {...BasketMocks} />
-  );
+    <SafeAreaView style={styles.area}>
+      <HomeIndex />
+    </SafeAreaView>
+  )
 }
+
+const styles = StyleSheet.create({
+  area: {
+    flex: 1,
+  }
+})

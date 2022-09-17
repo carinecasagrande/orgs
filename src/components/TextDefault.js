@@ -7,16 +7,18 @@ export default function TextDefault({ children, style }) {
         styleDefault = styles.bold
     }
 
-    return <Text style={[style, styleDefault]}>{children}</Text>
+    return <Text style={[styles.default, style, styleDefault]}> {children}</Text >
 }
 
 const styles = StyleSheet.create({
     regular: {
         fontFamily: Platform.OS === 'ios' ? 'Montserrat-Regular' : 'MontserratRegular',
-        // fontWeight: 'normal',
     },
     bold: {
         fontFamily: Platform.OS === 'ios' ? 'Montserrat-Bold' : 'MontserratBold',
         fontWeight: Platform.OS === 'ios' ? 'bold' : 'normal',
+    },
+    default: {
+        color: "#464646",
     }
 })
