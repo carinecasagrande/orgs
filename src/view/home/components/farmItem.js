@@ -4,7 +4,6 @@ import Stars from "../../../components/Stars"
 import TextDefault from "../../../components/TextDefault"
 
 const meters = (distance) => {
-    console.log(distance)
     return `${distance}m`
 }
 
