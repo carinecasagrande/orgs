@@ -1,22 +1,22 @@
-import React, { useState } from "react"
-import { StyleSheet, View } from "react-native"
-import Star from "./Star";
+import React, { useState } from 'react'
+import { StyleSheet, View } from 'react-native'
+import ComponentStar from './ComponentStar'
 
-export default function Stars({ stars: oldStars, editable = false, large = false }) {
+export default function ComponentStars({ stars: oldStars, editable = false, large = false }) {
     const [quantity, setQuantity] = useState(oldStars)
 
     const RenderStars = () => {
-        const listStars = [];
+        const listStars = []
         for (let i = 0; i < 5; i++) {
             listStars.push(
-                <Star
+                <ComponentStar
                     key={i}
                     onPress={() => setQuantity(i + 1)}
                     disabled={!editable}
                     fill={i < quantity}
                     large={large}
                 />
-            );
+            )
         }
 
         return listStars
@@ -29,6 +29,6 @@ export default function Stars({ stars: oldStars, editable = false, large = false
 
 const styles = StyleSheet.create({
     starList: {
-        flexDirection: "row",
+        flexDirection: 'row',
     }
 })

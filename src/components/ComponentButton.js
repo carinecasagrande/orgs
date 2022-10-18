@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity } from 'react-native'
-import TextDefault from './TextDefault'
+import ComponentText from './ComponentText'
 
-export default function ButtonDefault({ children, style, onpress }) {
+export default function ComponentButton({ children, style, onpress }) {
     return <TouchableOpacity style={[style, styles.button]} onPress={onpress}>
-        <TextDefault style={styles.buttonText}>
+        <ComponentText style={styles.buttonText}>
             {children}
-        </TextDefault>
+        </ComponentText>
     </TouchableOpacity>
 }
 

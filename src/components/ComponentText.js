@@ -1,13 +1,13 @@
 import React from 'react'
 import { Platform, StyleSheet, Text } from 'react-native'
 
-export default function TextDefault({ children, style }) {
+export default function TextComponent({ children, style }) {
     let styleDefault = styles.regular
     if (style?.fontWeight == 'bold') {
         styleDefault = styles.bold
     }
 
-    return <Text style={[styles.default, style, styleDefault]}> {children}</Text >
+    return <Text style={[styles.default, style, styleDefault]}> {children}</Text>
 }
 
 const styles = StyleSheet.create({
@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
         fontWeight: Platform.OS === 'ios' ? 'bold' : 'normal',
     },
     default: {
-        color: "#464646",
+        color: '#464646',
     }
 })

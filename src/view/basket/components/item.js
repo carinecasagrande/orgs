@@ -1,31 +1,31 @@
-import React from "react"
-import { Image, StyleSheet, View } from "react-native"
-import TextDefault from "../../../components/TextDefault"
+import React from 'react';
+import { View, Image, StyleSheet } from 'react-native';
+import ComponentText from '../../../components/ComponentText'
 
-export default function item({ item: { name, image } }) {
-    return <View key={name} style={styles.item}>
-        <Image source={image} style={styles.itemImage} />
-        <TextDefault style={styles.itemName}>{name}</TextDefault>
+export default function Item({ item: { name, image } }) {
+    return <View style={styles.item}>
+        <Image source={image} style={styles.image} />
+        <ComponentText style={styles.name}>{name}</ComponentText>
     </View>
 }
 
 const styles = StyleSheet.create({
     item: {
-        flexDirection: 'row',
+        flexDirection: "row",
         borderBottomWidth: 1,
-        borderBottomColor: '#ececec',
+        borderBottomColor: "#ECECEC",
         paddingVertical: 16,
         marginHorizontal: 16,
-        alignItems: 'center',
+        alignItems: "center",
     },
-    itemImage: {
+    image: {
         width: 46,
         height: 46,
     },
-    itemName: {
+    name: {
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 11,
-        color: '#464646'
-    }
-})
+        color: "#464646"
+    },
+});

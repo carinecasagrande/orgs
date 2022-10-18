@@ -1,41 +1,27 @@
-import React from "react"
-import { Image, StyleSheet, View } from "react-native"
-import TextDefault from "../../../components/TextDefault"
-import { loadHeader } from "../../../services/loadData"
-import headerImage from "../../../assets/orgs.png"
+import React from 'react'
+import { View, Image, StyleSheet } from 'react-native'
+import ComponentText from '../../../components/ComponentText'
+import logo from '../../../assets/orgs.png'
+import useTexts from '../../../hooks/useTexts'
 
-class header extends React.Component {
-    state = {
-        header: {
-            welcome: "",
-            subtitle: "",
-        }
-    }
+export default function Header({ bestGrowers }) {
+    const { welcome, subtitle, subtitleBestGrowers } = useTexts()
 
-    updateHeader() {
-        const data = loadHeader()
-        this.setState({ header: data })
-    }
-
-    componentDidMount() {
-        this.updateHeader()
-    }
-
-    render() {
-        return <View style={styles.header}>
-            <Image source={headerImage} style={styles.image} />
-            <TextDefault style={styles.welcome}>{this.state.header.welcome}</TextDefault>
-            <TextDefault style={styles.subtitle}>{this.state.header.subtitle}</TextDefault>
+    return <>
+        <View style={styles.header}>
+            <Image source={logo} style={styles.logo} />
+            <ComponentText style={styles.welcome}>{bestGrowers ? '' : welcome}</ComponentText>
+            <ComponentText style={styles.subtitle}>{bestGrowers ? subtitleBestGrowers : subtitle}</ComponentText>
         </View>
-    }
+    </>
 }
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: "#f6f6f6",
+        backgroundColor: '#F6F6F6',
         padding: 16,
     },
-    image: {
+    logo: {
         width: 70,
         height: 28,
     },
@@ -43,13 +29,12 @@ const styles = StyleSheet.create({
         marginTop: 24,
         fontSize: 26,
         lineHeight: 42,
-        fontWeight: "bold",
+        fontWeight: 'bold',
+        color: '#464646'
     },
     subtitle: {
         fontSize: 16,
         lineHeight: 26,
-        color: "#a3a3a3"
+        color: '#A3A3A3',
     }
 })
-
-export default header

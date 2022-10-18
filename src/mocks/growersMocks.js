@@ -1,47 +1,47 @@
-import green from "../assets/farm/green.png"
-import salad from "../assets/farm/salad.png"
-import jennyJack from "../assets/farm/jenny-jack.png"
-import grow from "../assets/farm/grow.png"
-import potager from "../assets/farm/potager.png"
+import green from '../assets/grower/green.png'
+import salad from '../assets/grower/salad.png'
+import jennyJack from '../assets/grower/jenny-jack.png'
+import grow from '../assets/grower/grow.png'
+import potager from '../assets/grower/potager.png'
 
 const rand = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-const farmMocks = {
-    title: "Produtores",
+const growersMocks = {
+    title: 'Produtores',
     list: [
         {
             id: 1,
-            name: "Green",
+            name: 'Green',
             image: green,
             distance: rand(1, 500),
             stars: rand(1, 5),
         },
         {
             id: 2,
-            name: "Salad",
+            name: 'Salad',
             image: salad,
             distance: rand(1, 500),
             stars: rand(1, 5),
         },
         {
             id: 3,
-            name: "Jenny Jack Farm",
+            name: 'Jenny Jack Farm',
             image: jennyJack,
             distance: rand(1, 500),
             stars: rand(1, 5),
         },
         {
             id: 4,
-            name: "Grow",
+            name: 'Grow',
             image: grow,
             distance: rand(1, 500),
             stars: rand(1, 5),
         },
         {
             id: 5,
-            name: "Potager",
+            name: 'Potager',
             image: potager,
             distance: rand(1, 500),
             stars: rand(1, 5),
@@ -49,4 +49,4 @@ const farmMocks = {
     ]
 }
 
-export default farmMocks
+export default growersMocks

@@ -1,39 +1,47 @@
 import React from 'react'
-import Header from './components/header'
-import Details from './components/details'
+import { FlatList, StyleSheet, View } from 'react-native'
+import ComponentText from '../../components/ComponentText'
+import ComponentHeader from '../../components/ComponentHeader'
+import useTexts from '../../hooks/useTexts'
 import Item from './components/item'
-import { View, StyleSheet, FlatList } from 'react-native'
-import TextDefault from '../../components/TextDefault'
+import Details from './components/details'
 
-export default function BasketIndex({ header, details, itens }) {
-    return <FlatList
-        data={itens.list}
-        renderItem={Item}
-        keyExtractor={({ id }) => id}
-        ListHeaderComponent={() => {
-            return <>
-                <Header {...header} />
-                <View style={styles.basket}>
-                    <Details {...details} />
-                    <TextDefault style={styles.title}>{itens.title}</TextDefault>
-                </View>
-            </>
-        }}
-    />
+export default function basket({ details, itens, grower }) {
+    const { headerBasket, titleItens } = useTexts()
+
+    return <>
+        <FlatList
+            data={itens}
+            renderItem={Item}
+            keyExtractor={({ id }) => id}
+            ListHeaderComponent={() => {
+                return <>
+                    <ComponentHeader title={headerBasket} />
+                    <View style={styles.basket}>
+                        <Details {...details} grower={grower} />
+                        <ComponentText style={styles.title}>{titleItens}</ComponentText>
+                    </View>
+                </>
+            }}
+            style={styles.list}
+        />
+    </>
 }
 
 const styles = StyleSheet.create({
-    basket: {
-        paddingVertical: 8,
-        paddingHorizontal: 16,
+    list: {
+        backgroundColor: '#ffffff',
     },
     title: {
         color: '#464646',
         fontWeight: 'bold',
         marginTop: 32,
-        marginBottom: 20,
+        marginBottom: 8,
         fontSize: 20,
-        lineHeight: 32
+        lineHeight: 32,
+    },
+    basket: {
+        paddingVertical: 8,
+        paddingHorizontal: 16,
     },
 })
-

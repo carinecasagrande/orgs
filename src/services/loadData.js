@@ -1,10 +1,10 @@
-import farmMocks from "../mocks/farm"
-import headerMocks from "../mocks/header"
+import growersMocks from '../mocks/growersMocks'
+import textsMocks from '../mocks/textsMocks'
 
-export const loadFarm = () => {
-    return farmMocks
+export const loadGrowers = () => {
+    return growersMocks
 }
 
-export const loadHeader = () => {
-    return headerMocks
+export const loadTexts = () => {
+    return textsMocks
 }

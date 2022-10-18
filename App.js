@@ -1,24 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import { SafeAreaView, StatusBar } from 'react-native'
 import HomeIndex from './src/view/home'
-import SplashScreen from 'react-native-splash-screen'
-import { SafeAreaView, StyleSheet } from 'react-native'
 
 export default function App() {
-  useEffect(() => {
-    setTimeout(() => {
-      SplashScreen.hide()
-    }, 500)
-  })
-
-  return (
-    <SafeAreaView style={styles.area}>
-      <HomeIndex />
-    </SafeAreaView>
-  )
+	return <SafeAreaView style={{ flex: 1 }}>
+		<StatusBar />
+		<HomeIndex bestGrowers={false} />
+	</SafeAreaView>
 }
-
-const styles = StyleSheet.create({
-  area: {
-    flex: 1,
-  }
-})

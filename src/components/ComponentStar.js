@@ -1,17 +1,17 @@
-import React from "react"
-import { Image, StyleSheet, TouchableOpacity } from "react-native"
-import star from "../assets/star.png"
-import fillStar from "../assets/fillStar.png"
+import React from 'react'
+import { Image, StyleSheet, TouchableOpacity } from 'react-native'
+import star from '../assets/star.png'
+import fillStar from '../assets/fillStar.png'
 
-export default function Star({ onPress, disabled = true, fill, large = false }) {
+export default function ComponentStar({ onPress, disabled = true, fill, large = false }) {
     const styles = stylesFunction(large)
 
     const getImage = () => {
         if (fill) {
-            return fillStar;
+            return fillStar
         }
 
-        return star;
+        return star
     }
 
     return <TouchableOpacity
