@@ -9,7 +9,7 @@ export default function Details({ name, grower, description, price }) {
     return <>
         <ComponentText style={styles.name}>{name}</ComponentText>
         <View style={styles.farm}>
-            <Image source={grower.imagem} style={styles.farmImage} />
+            <Image source={grower.image} style={styles.farmImage} />
             <ComponentText style={styles.farmName}>{grower.name}</ComponentText>
         </View>
         <ComponentText style={styles.description}>{description}</ComponentText>
