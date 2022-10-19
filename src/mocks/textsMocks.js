@@ -8,6 +8,7 @@ const textsMocks = {
     headerBasket: 'Detalhe da cesta',
     buttonBuy: 'Comprar',
     titleItens: 'Itens da cesta',
+    titleBestGrowers: 'Melhores Produtores',
 }
 
 export default textsMocks

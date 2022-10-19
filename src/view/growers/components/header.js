@@ -5,12 +5,12 @@ import logo from '../../../assets/orgs.png'
 import useTexts from '../../../hooks/useTexts'
 
 export default function Header({ bestGrowers }) {
-    const { welcome, subtitle, subtitleBestGrowers } = useTexts()
+    const { welcome, subtitle, subtitleBestGrowers, titleBestGrowers } = useTexts()
 
     return <>
         <View style={styles.header}>
             <Image source={logo} style={styles.logo} />
-            <ComponentText style={styles.welcome}>{bestGrowers ? '' : welcome}</ComponentText>
+            <ComponentText style={styles.welcome}>{bestGrowers ? titleBestGrowers : welcome}</ComponentText>
             <ComponentText style={styles.subtitle}>{bestGrowers ? subtitleBestGrowers : subtitle}</ComponentText>
         </View>
     </>
