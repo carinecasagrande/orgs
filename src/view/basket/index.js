@@ -2,13 +2,12 @@ import React from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import ComponentText from '../../components/ComponentText'
 import ComponentHeader from '../../components/ComponentHeader'
-import useTexts from '../../hooks/useTexts'
-import Item from './components/item'
 import Details from './components/details'
+import Item from './components/item'
+import useTexts from '../../hooks/useTexts'
 
-export default function basket({ details, itens, grower }) {
-    const { headerBasket, titleItens } = useTexts()
-
+export default function BasketIndex({ details, itens, grower }) {
+    const { titleBasket, titleItens } = useTexts()
     return <>
         <FlatList
             data={itens}
@@ -16,7 +15,7 @@ export default function basket({ details, itens, grower }) {
             keyExtractor={({ id }) => id}
             ListHeaderComponent={() => {
                 return <>
-                    <ComponentHeader title={headerBasket} />
+                    <ComponentHeader title={titleBasket} />
                     <View style={styles.basket}>
                         <Details {...details} grower={grower} />
                         <ComponentText style={styles.title}>{titleItens}</ComponentText>
@@ -33,8 +32,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     title: {
-        color: '#464646',
-        fontWeight: 'bold',
+        color: "#464646",
+        fontWeight: "bold",
         marginTop: 32,
         marginBottom: 8,
         fontSize: 20,

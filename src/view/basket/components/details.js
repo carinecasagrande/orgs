@@ -3,7 +3,7 @@ import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 import ComponentText from '../../../components/ComponentText'
 import useTexts from '../../../hooks/useTexts';
 
-export default function Detalhes({ name, grower, description, price }) {
+export default function Details({ name, grower, description, price }) {
     const { buttonBuy } = useTexts();
 
     return <>

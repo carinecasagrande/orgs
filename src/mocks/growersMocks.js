@@ -1,6 +1,6 @@
 import green from '../assets/grower/green.png'
 import salad from '../assets/grower/salad.png'
-import jennyJack from '../assets/grower/jenny-jack.png'
+import jennyJack from '../assets/grower/jennyjack.png'
 import grow from '../assets/grower/grow.png'
 import potager from '../assets/grower/potager.png'
 
@@ -28,24 +28,28 @@ const growersMocks = {
             stars: rand(1, 5),
             baskets: [
                 {
+                    id: 1,
                     details: {
-                        name: "Brócolis e cucumber",
+                        name: "Brócolis e Pepino",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
                         price: "R$ 40,00",
                         image: cucumber
                     },
                     itens: [
                         {
+                            id: 1,
                             name: "Brócolis",
                             image: broccoli,
                         },
                         {
-                            name: "cucumber",
+                            id: 2,
+                            name: "Pepino",
                             image: cucumber,
                         },
                     ]
                 },
                 {
+                    id: 2,
                     details: {
                         name: "Brócolis",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
@@ -54,6 +58,7 @@ const growersMocks = {
                     },
                     itens: [
                         {
+                            id: 1,
                             name: "Brócolis",
                             image: broccoli,
                         },
@@ -69,6 +74,7 @@ const growersMocks = {
             stars: rand(1, 5),
             baskets: [
                 {
+                    id: 1,
                     details: {
                         name: "Salada completa",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
@@ -77,33 +83,39 @@ const growersMocks = {
                     },
                     itens: [
                         {
-                            name: "tomato",
+                            id: 1,
+                            name: "Tomate",
                             image: tomato,
                         },
                         {
+                            id: 2,
                             name: "Brócolis",
                             image: broccoli,
                         },
                         {
-                            name: "cucumber",
+                            id: 3,
+                            name: "Pepino",
                             image: cucumber,
                         },
                     ]
                 },
                 {
+                    id: 2,
                     details: {
-                        name: "tomato e cucumber",
+                        name: "Tomate e cucumber",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
                         price: "R$ 40,00",
                         image: tomato
                     },
                     itens: [
                         {
-                            name: "tomato",
+                            id: 1,
+                            name: "Tomate",
                             image: tomato,
                         },
                         {
-                            name: "cucumber",
+                            id: 2,
+                            name: "Pepino",
                             image: cucumber,
                         },
                     ]
@@ -118,33 +130,37 @@ const growersMocks = {
             stars: rand(1, 5),
             baskets: [
                 {
+                    id: 1,
                     details: {
-                        name: "Muita potato",
+                        name: "Muita Batata",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
                         price: "R$ 40,00",
-
                         image: potato
                     },
                     itens: [
                         {
-                            name: "potato",
+                            id: 1,
+                            name: "Batata",
                             image: potato,
                         },
                     ]
                 },
                 {
+                    id: 2,
                     details: {
-                        name: "tomato e Brócolis",
+                        name: "Tomate e Brócolis",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
                         price: "R$ 40,00",
                         image: broccoli
                     },
                     itens: [
                         {
-                            name: "tomato",
+                            id: 1,
+                            name: "Tomate",
                             image: tomato,
                         },
                         {
+                            id: 2,
                             name: "Brócolis",
                             image: broccoli,
                         },
@@ -160,36 +176,42 @@ const growersMocks = {
             stars: rand(1, 5),
             baskets: [
                 {
+                    id: 1,
                     details: {
-                        name: "pumpkin e asparagus",
+                        name: "Abobora e Aspargos",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
                         price: "R$ 40,00",
                         image: asparagus
                     },
                     itens: [
                         {
+                            id: 1,
                             name: "Abóbora",
                             image: pumpkin,
                         },
                         {
-                            name: "asparagus",
+                            id: 2,
+                            name: "Aspargos",
                             image: asparagus,
                         }
                     ]
                 },
                 {
+                    id: 2,
                     details: {
-                        name: "tomato e pumpkin",
+                        name: "Tomate e Abobora",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
                         price: "R$ 40,00",
                         image: pumpkin
                     },
                     itens: [
                         {
-                            name: "tomato",
+                            id: 1,
+                            name: "Tomate",
                             image: tomato,
                         },
                         {
+                            id: 2,
                             name: "Abóbora",
                             image: pumpkin,
                         }
@@ -205,6 +227,7 @@ const growersMocks = {
             stars: rand(1, 5),
             baskets: [
                 {
+                    id: 1,
                     details: {
                         name: "Pepinos",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
@@ -213,29 +236,34 @@ const growersMocks = {
                     },
                     itens: [
                         {
-                            name: "cucumber",
+                            id: 1,
+                            name: "Pepino",
                             image: cucumber,
                         },
                     ]
                 },
                 {
+                    id: 2,
                     details: {
-                        name: "Brócolis, asparagus e carrot",
+                        name: "Brócolis, Aspargos e Cenoura",
                         description: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
                         price: "R$ 40,00",
                         image: carrot_2
                     },
                     itens: [
                         {
+                            id: 1,
                             name: "Brócolis",
                             image: broccoli,
                         },
                         {
-                            name: "asparagus",
+                            id: 2,
+                            name: "Aspargos",
                             image: asparagus,
                         },
                         {
-                            name: "carrot",
+                            id: 3,
+                            name: "Cenoura",
                             image: carrot,
                         }
                     ]
