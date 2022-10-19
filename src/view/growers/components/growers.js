@@ -1,12 +1,12 @@
 import React from 'react'
 import { FlatList, StyleSheet } from 'react-native'
-import ComponentText from '../../components/ComponentText'
-import Header from './components/header'
-import Grower from './components/grower'
-import useGrowers from '../../hooks/useGrowers'
-import useTexts from '../../hooks/useTexts'
+import ComponentText from '../../../components/ComponentText'
+import useGrowers from '../../../hooks/useGrowers'
+import useTexts from '../../../hooks/useTexts'
+import Grower from './grower'
+import Header from './header'
 
-export default function HomeIndex({ bestGrowers }) {
+export default function Growers({ bestGrowers }) {
     const list = useGrowers(bestGrowers)
     const { titleGrowers } = useTexts()
 

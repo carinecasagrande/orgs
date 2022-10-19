@@ -12,10 +12,11 @@ export default function useGrowers(bestGrowers) {
 
         let newList = data.list
         if (bestGrowers) {
-            newList = data.list.filter(
+            newList = newList.filter(
                 (grower) => grower.stars > 3
             )
         }
+
         setList(newList)
     }, [])
 
